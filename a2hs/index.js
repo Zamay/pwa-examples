@@ -14,6 +14,7 @@ setInterval(function() {
 // Register service worker to control making site work offline
 
 if('serviceWorker' in navigator) {
+  console.log('serviceWorker');
   navigator.serviceWorker
            .register('/pwa-examples/a2hs/sw.js')
            .then(function() { console.log('Service Worker Registered'); });
@@ -26,6 +27,7 @@ const addBtn = document.querySelector('.add-button');
 addBtn.style.display = 'none';
 
 window.addEventListener('beforeinstallprompt', (e) => {
+  console.log("beforeinstallprompt");
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
