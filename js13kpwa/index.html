@@ -13,6 +13,17 @@
 	<link rel="manifest" href="js13kpwa.webmanifest">
 	<script src="data/games.js" defer></script>
 	<script src="app.js" defer></script>
+	<script src="OneSignalSDKUpdaterWorker.js" defer></script>
+	<script src="OneSignalSDKWorker.js" defer></script>
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+		window.OneSignal = window.OneSignal || [];
+		OneSignal.push(function() {
+			OneSignal.init({
+			appId: "2e043b1b-676e-4405-9183-f5e1804cc914",
+			});
+		});
+	</script>
 	<style>
 		.add-button {
 			position: absolute;
